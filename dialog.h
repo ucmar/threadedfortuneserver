@@ -51,7 +51,8 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
-#include <QWidget>
+//#include <QWidget>
+#include <QObject>
 #include "fortuneserver.h"
 
 QT_BEGIN_NAMESPACE
@@ -59,12 +60,12 @@ class QLabel;
 class QPushButton;
 QT_END_NAMESPACE
 
-class Dialog : public QWidget
+class Dialog : public QObject//QWidget
 {
     Q_OBJECT
 
 public:
-    Dialog(QWidget *parent = 0);
+    Dialog(/*QWidget *parent = 0*/);
 
 private:
     QLabel *statusLabel;

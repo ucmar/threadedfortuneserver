@@ -1,4 +1,5 @@
-QT += network widgets
+QT += network
+QT -= widgets
 
 HEADERS       = dialog.h \
                 fortuneserver.h \
