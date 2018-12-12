@@ -68,8 +68,8 @@ public:
     Dialog(/*QWidget *parent = 0*/);
 
 private:
-    QLabel *statusLabel;
-    QPushButton *quitButton;
+    //QLabel *statusLabel;
+    //QPushButton *quitButton;
     FortuneServer server;
 };
 
