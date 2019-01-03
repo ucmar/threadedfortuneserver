@@ -50,6 +50,7 @@
 
 #include "fortuneserver.h"
 #include "fortunethread.h"
+#include <QSqlDatabase>
 
 #include <stdlib.h>
 
@@ -57,6 +58,13 @@
 FortuneServer::FortuneServer(QObject *parent)
     : QTcpServer(parent)
 {
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+        db.setHostName("bigblue");
+        db.setDatabaseName("flightdb");
+        db.setUserName("acarlson");
+        db.setPassword("1uTbSbAs");
+        bool ok = db.open();
+
     fortunes << tr("You've been leading a dog's life. Stay off the furniture.")
              << tr("You've got to think about tomorrow.")
              << tr("You will be surprised by a loud noise.")

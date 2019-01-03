@@ -1,5 +1,6 @@
 QT += network
 QT -= widgets
+QT += sql
 
 HEADERS       = dialog.h \
                 fortuneserver.h \
